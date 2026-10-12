@@ -8,6 +8,17 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
+
+  // ✅ এই ব্লকটি নতুন যোগ করুন
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
+
   turbopack: {
     rules: {
       "*.css": {
